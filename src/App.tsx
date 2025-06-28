@@ -1,12 +1,15 @@
-import "./App.css";
-import { Button } from "./components/ui/button";
+import { Toaster } from "./components/ui/toaster";
+import { Toaster as Sonner } from "./components/ui/sonner";
+import { TooltipProvider } from "./components/ui/tooltip";
 
-function App() {
-  return (
-    <>
-      <Button>New Button</Button>
-    </>
-  );
-}
+import Index from "./pages/Index";
+
+const App = () => (
+  <TooltipProvider>
+    <Toaster />
+    <Sonner />
+    <Index />
+  </TooltipProvider>
+);
 
 export default App;
